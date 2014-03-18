@@ -121,13 +121,13 @@ public class CentralCode extends IterativeRobot {
         //    relay.set(Relay.Value.kOn);
         if (autoTimer.get() < autoMoveForwardTime) {
             autoForward();
-            System.out.println("moving forward" + autoTimer.get() + ultrasonic.getAverageVoltage());
+            System.out.println("Moving forward, Timer at " + autoTimer.get() + ", Ultrasonic at " + ultrasonic.getAverageVoltage());
         }
         if (autoTimer.get() == autoMoveForwardTime && ultrasonic.getAverageVoltage() <= AUTO_DISTANCE) {
             stop();
             shoot();
 
-            System.out.println("shooting" + ultrasonic.getAverageVoltage());
+            System.out.println("Shooting, Ultrasonic at " + ultrasonic.getAverageVoltage());
         }
     }
 
